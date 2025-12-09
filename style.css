@@ -1,0 +1,65 @@
+body{
+  overflow: hidden;
+  margin: 0;
+  height: 100vh; /* giữ nguyên nếu bạn muốn */
+}
+
+.container{
+  position:absolute;
+  top:0;
+  left:0;
+  height:80%;
+  width:30%;
+  text-align:justify;
+  color:white;
+  font-family:cursive;
+  z-index: 10;
+}
+
+/* Style cho nút điều khiển âm thanh */
+#audio-control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #ff00ff; /* Màu mặc định: Hồng tím */
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    transition: background-color 0.3s;
+}
+
+#audio-control:hover {
+    background-color: #cc00cc;
+}
+
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      height: auto;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      text-align: left;
+  }
+
+  #audio-control {
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+  }
+}
+
+/* Điện thoại nhỏ hơn nữa */
+@media (max-width: 480px) {
+  .container {
+      width: 95%;
+      font-size: 14px;
+  }
+}
